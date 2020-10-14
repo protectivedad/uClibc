@@ -52,11 +52,11 @@ noconfig_targets := menuconfig config nconfig \
 CROSS_COMPILE ?= $(CROSS)
 
 CC         = $(CROSS_COMPILE)gcc
-AR         = $(CROSS_COMPILE)ar
+AR         = $(CROSS_COMPILE)gcc-ar
 LD         = $(CROSS_COMPILE)ld
-NM         = $(CROSS_COMPILE)nm
+NM         = $(CROSS_COMPILE)gcc-nm
 OBJDUMP    = $(CROSS_COMPILE)objdump
-STRIPTOOL  = $(CROSS_COMPILE)strip
+STRIPTOOL  = true
 
 INSTALL    = install
 LN         = ln
